@@ -85,80 +85,45 @@
       }
     }
 
-       
-    /*Адаптація для планшетів*/
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 15px;
-      }
-  
-      .logo {
-        margin-bottom: 15px;
-        font-size: 2rem;
-        text-align: center;
-      }
-  
-      .navbar {
-        display: flex;
-        flex-direction: column; /* Робимо вертикальне розташування */
-        gap: 15px; /* Зменшуємо відстань між елементами для компактності */
-        align-items: center; /* Центруємо посилання */
-        width: 100%; /* Навбар займає всю ширину */
-        margin-bottom: 15px;
-  
-        a {
-          display: block;
-          padding: 10px 0; /* Додаємо відступи для вертикального меню */
-          width: 100%; /* Кожен пункт навбару займає всю ширину */
-          text-align: center; /* Центруємо текст */
-          font-size: 1.1rem;
-          color: #333;
-          transition: color 0.3s ease;
-        }
-      }
-  
-      .auth-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-  
-        .btn {
-          padding: 10px 20px;
-          font-size: 0.95rem;
-          text-align: center;
-          width: 80%;
-          margin: 0 auto;
-        }
-      }
-    }
-    /*Адаптація для мобільних*/
     @media (max-width: 480px) {
       .navbar {
-        gap: 5px;
-  
+        display: flex;
+        flex-direction: column; /* Вертикальне розташування пунктів меню */
+        align-items: center; /* Центруємо навігаційні елементи */
+        width: 100%;
+        gap: 3px; /* Зменшуємо відстань між елементами меню */
+    
         a {
-          font-size: 1rem;
+          text-align: center;
+          width: 100%; /* Кожен пункт меню займає всю ширину */
+          padding: 5px 0; /* Зменшуємо вертикальні відступи для компактності */
+          margin: 0; /* Прибираємо зовнішні відступи */
+          font-size: 0.9rem; /* Робимо шрифт трохи меншим для мобільних екранів */
         }
       }
-  
-      .auth-buttons .btn {
-        padding: 8px 12px;
-        width: 90%;
-      }
-
-      .logo {
-        font-size: 3rem;
-        text-align: center;
+    
+      .auth-buttons {
+        display: flex;
+        flex-direction: column; /* Вертикальне розташування кнопок */
+        align-items: center; /* Центруємо кнопки */
+        gap: 5px; /* Зменшуємо відстань між кнопками */
         width: 100%;
-        margin-bottom: 20px;
-        margin-left: 20px;
+    
+        .btn {
+          padding: 8px 15px; /* Менші відступи для компактності на мобільних */
+          font-size: 0.85rem; /* Трохи зменшуємо шрифт для кнопок */
+          width: 90%; /* Кнопки займають 90% ширини для зручності користування */
+          margin: 0 auto; /* Центруємо кнопки */
+        }
+      }
+    
+      .logo {
+        text-align: center;
+        font-size: 2.5rem; /* Збільшуємо розмір логотипу для привертання уваги */
+        margin-bottom: 15px; /* Відділяємо логотип від навігації */
       }
     }
-  }
-    
+  }    
 
 
   .hero {
