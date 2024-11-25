@@ -3,6 +3,8 @@
   background-color: #ffffff;
   border-bottom: 1px solid #e5e5e5;
   padding: 15px 0;
+  /*Адаптація для планшетів*/
+  /*Адаптація для мобільних*/
 }
 .header .container {
   display: -webkit-box;
@@ -79,6 +81,85 @@
 }
 .header .auth-buttons .btn-primary:hover {
   background: darken #01996d, 10%;
+}
+@media (max-width: 768px) {
+  .header .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 15px;
+  }
+  .header .logo {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .header .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Робимо вертикальне розташування */
+    gap: 15px; /* Зменшуємо відстань між елементами для компактності */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Центруємо посилання */
+    width: 100%; /* Навбар займає всю ширину */
+    margin-bottom: 15px;
+  }
+  .header .navbar a {
+    display: block;
+    padding: 10px 0; /* Додаємо відступи для вертикального меню */
+    width: 100%; /* Кожен пункт навбару займає всю ширину */
+    text-align: center; /* Центруємо текст */
+    font-size: 1.1rem;
+    color: #333;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  .header .auth-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .header .auth-buttons .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .header .navbar {
+    gap: 5px;
+  }
+  .header .navbar a {
+    font-size: 1rem;
+  }
+  .header .auth-buttons .btn {
+    padding: 8px 12px;
+    width: 90%;
+  }
+  .header .logo {
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
 }
 
 .hero {
