@@ -176,14 +176,44 @@
         background-color: darken(#01996d, 10%); 
       }
     }
+  
+   // Адаптація для пристроїв із шириною 480px і менше
+   @media (max-width: 480px) {
+
+    .container {
+      background: rgba(255, 255, 255, 0.6); // Напівпрозорий фон для мобільних
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center; // Центруємо текст для мобільних
+    }
+
+    h1 {
+      font-size: 1.8rem; // Зменшення розміру шрифту
+      text-align: center; // Центрування тексту
+      left: 0; // Вирівнювання по центру
+    }
+
+    p {
+      font-size: 0.9rem; // Зменшення розміру шрифту
+      text-align: center; // Центрування тексту
+      left: 0; // Вирівнювання по центру
+    }
+
+    .btn-primary {
+      font-size: 0.9rem; // Зменшення розміру шрифту кнопки
+      padding: 10px 15px; // Компактніший розмір кнопки
+      text-align: center; // Центрування кнопки
+      left: 0; // Вирівнювання по центру
+    }
   }
+}
   
   .how-it-works {
     padding: 50px 0; 
     background-color: #ffffff; 
   
     .container {
-      max-width: 1200px; 
+      max-width: 1200px;
       margin: 0 auto; 
   
       .text-content {
