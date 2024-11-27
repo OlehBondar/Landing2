@@ -135,6 +135,8 @@
   text-align: left;
   padding: 100px 0;
   position: relative;
+  width: 100%;
+  /* Стилі для мобільних пристроїв */
 }
 .hero .container {
   max-width: 800px;
@@ -437,6 +439,19 @@
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 480px) {
+  .success-story .btn {
+    display: block;
+    width: 100;
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+  .success-story .btn:hover {
+    background-color: #00573d;
+  }
+}
 
 /* Секція "Продукт" */
 .product {
@@ -505,6 +520,42 @@
 }
 .product .product-content .btn:hover {
   background-color: #00573d;
+}
+@media (max-width: 480px) {
+  .product .product .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Вертикальне розташування */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Центруємо текст і зображення */
+  }
+  .product .product-image img {
+    max-width: 90%; /* Зображення займає 90% ширини контейнера */
+    margin-bottom: 20px; /* Відступ між зображенням і текстом */
+  }
+  .product .product-content {
+    text-align: center; /* Центруємо текст */
+  }
+  .product .product-content h2 {
+    font-size: 1.8rem; /* Зменшений заголовок */
+  }
+  .product .product-content p {
+    font-size: 1rem;
+    margin-bottom: 20px; /* Відступи між текстами */
+  }
+  .product .btn {
+    display: block;
+    width: 100;
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+  .product .btn:hover {
+    background-color: #00573d;
+  }
 }
 
 /* Футер */

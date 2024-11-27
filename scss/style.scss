@@ -132,6 +132,7 @@
     text-align: left; 
     padding: 100px 0; 
     position: relative;
+    width: 100%;
     
 
     .container {
@@ -177,36 +178,37 @@
       }
     }
   
-   // Адаптація для пристроїв із шириною 480px і менше
-   @media (max-width: 480px) {
+  /* Стилі для мобільних пристроїв */
+    @media (max-width: 480px) {
+      .container {
+        background: rgba(255, 255, 255, 0.6); // Напівпрозорий фон для мобільних
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center; // Центруємо текст для мобільних
+      }
+  
+      h1 {
+        font-size: 1.8rem; // Зменшення розміру шрифту
+        text-align: center; // Центрування тексту
+        left: 0; // Вирівнювання по центру
+      }
+  
+      p {
+        font-size: 0.9rem; // Зменшення розміру шрифту
+        text-align: center; // Центрування тексту
+        left: 0; // Вирівнювання по центру
+      }
+     
 
-    .container {
-      background: rgba(255, 255, 255, 0.6); // Напівпрозорий фон для мобільних
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center; // Центруємо текст для мобільних
-    }
+      .btn-primary {
+        font-size: 0.9rem; // Зменшення розміру шрифту кнопки
+        padding: 10px 15px; // Компактніший розмір кнопки
+        text-align: center; // Центрування кнопки
+        left: 0; // Вирівнювання по центру
+     }
+   }  
+  } 
 
-    h1 {
-      font-size: 1.8rem; // Зменшення розміру шрифту
-      text-align: center; // Центрування тексту
-      left: 0; // Вирівнювання по центру
-    }
-
-    p {
-      font-size: 0.9rem; // Зменшення розміру шрифту
-      text-align: center; // Центрування тексту
-      left: 0; // Вирівнювання по центру
-    }
-
-    .btn-primary {
-      font-size: 0.9rem; // Зменшення розміру шрифту кнопки
-      padding: 10px 15px; // Компактніший розмір кнопки
-      text-align: center; // Центрування кнопки
-      left: 0; // Вирівнювання по центру
-    }
-  }
-}
   
   .how-it-works {
     padding: 50px 0; 
@@ -412,7 +414,27 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
   }
-}
+  
+     @media (max-width: 480px) {
+
+      .btn {
+        display:block ;
+        width: 100;
+        max-width: 300px;
+        margin: 20px auto;
+        font-size: 1rem;
+        padding: 12px 20px;
+
+         &:hover {
+          background-color: #00573d;
+       }
+      } 
+    }
+  }    
+  
+    
+  
+      
 
 /* Секція "Продукт" */
 .product {
@@ -475,7 +497,46 @@
       }
     }
   }
-}
+
+  @media (max-width: 480px) {
+
+    .product .container {
+      flex-direction: column; /* Вертикальне розташування */
+      align-items: center; /* Центруємо текст і зображення */
+    }
+  
+    .product-image img {
+      max-width: 90%; /* Зображення займає 90% ширини контейнера */
+      margin-bottom: 20px; /* Відступ між зображенням і текстом */
+    }
+  
+    .product-content {
+      text-align: center; /* Центруємо текст */
+    }
+  
+    .product-content h2 {
+      font-size: 1.8rem; /* Зменшений заголовок */
+    }
+  
+    .product-content p {
+      font-size: 1rem;
+      margin-bottom: 20px; /* Відступи між текстами */
+    }
+    
+    .btn {
+      display:block ;
+      width: 100;
+      max-width: 300px;
+      margin: 20px auto;
+      font-size: 1rem;
+      padding: 12px 20px;
+
+       &:hover {
+        background-color: #00573d;
+      }
+   }
+  }
+}   
 
 /* Футер */
 .footer {
