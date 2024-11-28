@@ -1,8 +1,10 @@
 @charset "UTF-8";
+/*Стилі для хедера та навігації*/
 .header {
   background-color: #ffffff;
   border-bottom: 1px solid #e5e5e5;
   padding: 15px 0;
+  /*Адаптація для мобільних пристроїв*/
 }
 .header .container {
   display: -webkit-box;
@@ -119,8 +121,11 @@
   .header .auth-buttons .btn {
     padding: 8px 15px; /* Менші відступи для компактності на мобільних */
     font-size: 0.85rem; /* Трохи зменшуємо шрифт для кнопок */
-    width: 90%; /* Кнопки займають 90% ширини для зручності користування */
+    width: 80%; /* Кнопки займають 90% ширини для зручності користування */
     margin: 0 auto; /* Центруємо кнопки */
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .header .logo {
     text-align: center;
@@ -129,6 +134,7 @@
   }
 }
 
+/*Стилі для секції Hero*/
 .hero {
   background: url("../images/hero.jpeg") no-repeat center center/cover;
   color: #fff;
@@ -201,6 +207,7 @@
   }
 }
 
+/*Стилі для секції How it works*/
 .how-it-works {
   padding: 50px 0;
   background-color: #ffffff;
@@ -245,6 +252,7 @@
       -ms-flex: 1;
           flex: 1;
   text-align: left;
+  margin-top: 5px;
   margin-right: -50px;
 }
 .how-it-works .container .text-content .text-right .section-description {
@@ -252,9 +260,39 @@
   color: #555;
   line-height: 1.4;
   margin: 0;
-  margin-top: 5px;
+}
+@media (max-width: 480px) {
+  .how-it-works .text-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Встановлюємо вертикальне вирівнювання */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Центруємо елементи */
+  }
+  .how-it-works h2 {
+    font-size: 18px !important;
+  }
+  .how-it-works .text-right {
+    max-width: 90%; /* Зменшуємо ширину текстового блоку */
+    margin: 0 auto; /* Центруємо текст */
+    text-align: justify; /* Вирівнюємо текст по ширині */
+    padding: 0 15px; /* Додаємо відступи для зміщення праворуч */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-left: 1px;
+  }
+  .how-it-works .section-description {
+    font-size: 10px; /* Робимо текст компактнішим */
+    line-height: 1.4; /* Покращуємо читабельність */
+  }
 }
 
+/*Стилі для карток*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -363,7 +401,7 @@
   margin-right: -50px;
 }
 
-/* Секція "Історія успіху" */
+/* Cтилі для сеції  "Історія успіху" */
 .success-story {
   background-color: #2e6155; /* Темний зелений фон */
   padding: 60px 20px;
@@ -376,6 +414,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /*Стилі для мобільних пристроїав*/
 }
 .success-story .container {
   display: -webkit-box;
@@ -402,20 +441,20 @@
   margin-right: 30px;
 }
 .success-story .story-content h2 {
-  font-size: 3rem;
+  font-size: 1rem;
   color: #ffffff;
   margin-bottom: 20px;
   font-weight: bold;
   line-height: 1.2;
 }
 .success-story .story-content p {
-  font-size: 1.2rem;
+  font-size: 0.5rem;
   color: #e0e0e0;
   margin-bottom: 30px;
 }
 .success-story .story-content .btn {
   text-decoration: none;
-  padding: 15px 30px;
+  padding: 5px 10px;
   background-color: #007b5e;
   color: #ffffff;
   font-weight: bold;
@@ -457,6 +496,7 @@
 .product {
   padding: 60px 20px;
   background-color: #ffffff;
+  /*Стилі для секції "Продукт"*/
 }
 .product .container {
   display: -webkit-box;

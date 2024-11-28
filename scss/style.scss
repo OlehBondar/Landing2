@@ -1,3 +1,6 @@
+  
+  /*Стилі для хедера та навігації*/
+
   .header {
     background-color: #ffffff; 
     border-bottom: 1px solid #e5e5e5; 
@@ -85,6 +88,8 @@
       }
     }
 
+    /*Адаптація для мобільних пристроїв*/
+
     @media (max-width: 480px) {
       .navbar {
         display: flex;
@@ -112,8 +117,10 @@
         .btn {
           padding: 8px 15px; /* Менші відступи для компактності на мобільних */
           font-size: 0.85rem; /* Трохи зменшуємо шрифт для кнопок */
-          width: 90%; /* Кнопки займають 90% ширини для зручності користування */
+          width: 80%; /* Кнопки займають 90% ширини для зручності користування */
           margin: 0 auto; /* Центруємо кнопки */
+          text-align: center;
+          box-sizing: border-box;
         }
       }
     
@@ -125,6 +132,7 @@
     }
   }    
 
+   /*Стилі для секції Hero*/
 
   .hero {
     background: url('../images/hero.jpeg') no-repeat center center / cover; 
@@ -209,58 +217,92 @@
    }  
   } 
 
+    /*Стилі для секції How it works*/
   
-  .how-it-works {
-    padding: 50px 0; 
-    background-color: #ffffff; 
+    .how-it-works {
+      padding: 50px 0; 
+      background-color: #ffffff; 
+    
+      .container {
+          max-width: 1200px;
+          margin: 0 auto; 
+    
+          .text-content {
+              display: flex; 
+              justify-content: space-between; 
+              align-items: center; 
+              gap: 20px;
   
-    .container {
-      max-width: 1200px;
-      margin: 0 auto; 
-  
-      .text-content {
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-        gap: 20px;
+              .text-left {
+                  flex: 1; 
+                  text-align: left;
+    
+                  .section-label {
+                      font-size: 12px;
+                      color: #000000;
+                      text-transform: uppercase;
+                      margin-bottom: 0;
+                  }
+    
+                  h2 {
+                      font-size: 36px;
+                      color: #01996d;
+                      font-weight: bold;
+                      line-height: 1.6;
+                      margin-top: 0;
+                  }
+              }
+    
+                .text-right {
+                  flex: 1; 
+                  text-align: left;
+                   margin-top: 5px;
+                  margin-right: -50px;
+    
+                  .section-description {
+                      font-size: 16px;
+                      color: #555;
+                      line-height: 1.4;
+                      margin: 0;
+                  }
+                } 
+                
+          }
+      }
 
-        .text-left {
-          flex: 1; 
-          text-align: left;
-  
-          .section-label {
-            font-size: 12px;
-            color: #000000;
-            text-transform: uppercase;
-            margin-bottom: 0;
-            
-          }
-  
+      @media (max-width: 480px) {
+          
+
+        .text-content {
+          display: flex;
+          flex-direction: column; /* Встановлюємо вертикальне вирівнювання */
+          align-items: center; /* Центруємо елементи */
+          
+       }
+       
           h2 {
-            font-size: 36px;
-            color: #01996d;
-            font-weight: bold;
-            line-height: 1.6;
-            margin-top: 0;
+              font-size: 18px !important;
           }
+      
+          .text-right {
+            max-width: 90%; /* Зменшуємо ширину текстового блоку */
+            margin: 0 auto; /* Центруємо текст */
+            text-align: justify; /* Вирівнюємо текст по ширині */
+            padding: 0 15px; /* Додаємо відступи для зміщення праворуч */
+            box-sizing: border-box;
+            margin-left: 1px;
         }
-  
-        .text-right {
-          flex: 1; 
-          text-align: left;
-          margin-right: -50px;
-  
-          .section-description {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.4;
-            margin: 0;
-            margin-top: 5px;
-          }
+    
+        .section-description {
+            font-size: 10px; /* Робимо текст компактнішим */
+            line-height: 1.4; /* Покращуємо читабельність */
         }
       }
-    }
-  }
+    } 
+      
+    
+    
+    /*Стилі для карток*/
 
   .container {
     max-width: 1200px; // Максимальна ширина сторінки
@@ -352,7 +394,9 @@
     }
   }
   
-  /* Секція "Історія успіху" */
+ 
+  /* Cтилі для сеції  "Історія успіху" */
+
 .success-story {
   background-color: #2e6155; /* Темний зелений фон */
   padding: 60px 20px;
@@ -375,7 +419,7 @@
     margin-right: 30px;
 
     h2 {
-      font-size: 3rem;
+      font-size: 1rem;
       color: #ffffff;
       margin-bottom: 20px;
       font-weight: bold;
@@ -383,14 +427,14 @@
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 0.5rem;
       color: #e0e0e0;
       margin-bottom: 30px;
     }
 
     .btn {
       text-decoration: none;
-      padding: 15px 30px;
+      padding: 5px 10px;
       background-color: #007b5e;
       color: #ffffff;
       font-weight: bold;
@@ -415,6 +459,8 @@
     }
   }
   
+     /*Стилі для мобільних пристроїав*/
+
      @media (max-width: 480px) {
 
       .btn {
@@ -497,6 +543,8 @@
       }
     }
   }
+
+    /*Стилі для секції "Продукт"*/
 
   @media (max-width: 480px) {
 
