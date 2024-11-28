@@ -93,32 +93,32 @@
     @media (max-width: 480px) {
       .navbar {
         display: flex;
-        flex-direction: column; /* Вертикальне розташування пунктів меню */
-        align-items: center; /* Центруємо навігаційні елементи */
+        flex-direction: column; 
+        align-items: center; 
         width: 100%;
-        gap: 3px; /* Зменшуємо відстань між елементами меню */
+        gap: 3px; 
     
         a {
           text-align: center;
-          width: 100%; /* Кожен пункт меню займає всю ширину */
-          padding: 5px 0; /* Зменшуємо вертикальні відступи для компактності */
-          margin: 0; /* Прибираємо зовнішні відступи */
-          font-size: 0.9rem; /* Робимо шрифт трохи меншим для мобільних екранів */
+          width: 100%; 
+          padding: 5px 0; 
+          margin: 0; 
+          font-size: 0.9rem; 
         }
       }
     
       .auth-buttons {
         display: flex;
-        flex-direction: column; /* Вертикальне розташування кнопок */
-        align-items: center; /* Центруємо кнопки */
-        gap: 5px; /* Зменшуємо відстань між кнопками */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 5px; 
         width: 100%;
     
         .btn {
-          padding: 8px 15px; /* Менші відступи для компактності на мобільних */
-          font-size: 0.85rem; /* Трохи зменшуємо шрифт для кнопок */
-          width: 80%; /* Кнопки займають 90% ширини для зручності користування */
-          margin: 0 auto; /* Центруємо кнопки */
+          padding: 8px 15px; 
+          font-size: 0.85rem; 
+          width: 80%; 
+          margin: 0 auto; 
           text-align: center;
           box-sizing: border-box;
         }
@@ -126,8 +126,8 @@
     
       .logo {
         text-align: center;
-        font-size: 2.5rem; /* Збільшуємо розмір логотипу для привертання уваги */
-        margin-bottom: 15px; /* Відділяємо логотип від навігації */
+        font-size: 2.5rem; 
+        margin-bottom: 15px; 
       }
     }
   }    
@@ -135,12 +135,14 @@
    /*Стилі для секції Hero*/
 
   .hero {
+    position: relative;
     background: url('../images/hero.jpeg') no-repeat center center / cover; 
     color: #fff; 
     text-align: left; 
-    padding: 100px 0; 
+    padding: 100px 15px; 
     position: relative;
     width: 100%;
+    border-radius: 10px;
     
 
     .container {
@@ -155,16 +157,14 @@
       line-height: 1.2;
       margin-bottom: 20px;
       color: #01996d;
-      position: relative;
-      left: -200px;
+      
     }
   
     p {
       font-size: 1.2rem;
       margin-bottom: 30px;
       color: #484848;
-      position: relative;
-      left: -200px;
+      
     }
     
   
@@ -178,8 +178,7 @@
       text-decoration: none;
       cursor: pointer;
       transition: background-color 0.9s ease;
-      position: relative;
-      left: -200px;
+      
   
       &:hover {
         background-color: darken(#01996d, 10%); 
@@ -189,30 +188,30 @@
   /* Стилі для мобільних пристроїв */
     @media (max-width: 480px) {
       .container {
-        background: rgba(255, 255, 255, 0.6); // Напівпрозорий фон для мобільних
+        background: rgba(255, 255, 255, 0.6); 
         padding: 20px;
         border-radius: 10px;
-        text-align: center; // Центруємо текст для мобільних
+        text-align: center; 
       }
   
       h1 {
-        font-size: 1.8rem; // Зменшення розміру шрифту
-        text-align: center; // Центрування тексту
-        left: 0; // Вирівнювання по центру
+        font-size: 1.8rem; 
+        text-align: center; 
+        left: 0; 
       }
   
       p {
-        font-size: 0.9rem; // Зменшення розміру шрифту
-        text-align: center; // Центрування тексту
-        left: 0; // Вирівнювання по центру
+        font-size: 0.9rem; 
+        text-align: center; 
+        left: 0; 
       }
      
 
       .btn-primary {
-        font-size: 0.9rem; // Зменшення розміру шрифту кнопки
-        padding: 10px 15px; // Компактніший розмір кнопки
-        text-align: center; // Центрування кнопки
-        left: 0; // Вирівнювання по центру
+        font-size: 0.9rem; 
+        padding: 10px 15px; 
+        text-align: center; 
+        left: 0; 
      }
    }  
   } 
@@ -223,60 +222,65 @@
       padding: 50px 0; 
       background-color: #ffffff; 
     
-      .container {
-          max-width: 1200px;
-          margin: 0 auto; 
+            .container {
+             max-width: 1200px;
+             margin: 0 auto; 
     
-          .text-content {
-              display: flex; 
-              justify-content: space-between; 
-              align-items: center; 
-              gap: 20px;
+              .text-content {
+               display: flex; 
+               justify-content: space-between; 
+               align-items: center; 
+               gap: 20px;
   
-              .text-left {
+                .text-left {
                   flex: 1; 
                   text-align: left;
     
                   .section-label {
-                      font-size: 12px;
-                      color: #000000;
-                      text-transform: uppercase;
-                      margin-bottom: 0;
-                  }
+                   font-size: 12px;
+                   color: #000000;
+                   text-transform: uppercase;
+                   margin-bottom: 0;
+                 }
     
                   h2 {
-                      font-size: 36px;
-                      color: #01996d;
-                      font-weight: bold;
-                      line-height: 1.6;
-                      margin-top: 0;
-                  }
-              }
+                   font-size: 36px;
+                   color: #01996d;
+                   font-weight: bold;
+                   line-height: 1.6;
+                   margin-top: 0;
+                 }
+               }     
     
                 .text-right {
                   flex: 1; 
                   text-align: left;
-                   margin-top: 5px;
+                  margin-top: 5px;
                   margin-right: -50px;
     
-                  .section-description {
+                    .section-description {
                       font-size: 16px;
                       color: #555;
                       line-height: 1.4;
                       margin: 0;
-                  }
-                } 
+                   }
+                }
+              }
+           }  
+                 
+       
+
+                 
                 
-          }
-      }
+       
 
       @media (max-width: 480px) {
           
 
         .text-content {
           display: flex;
-          flex-direction: column; /* Встановлюємо вертикальне вирівнювання */
-          align-items: center; /* Центруємо елементи */
+          flex-direction: column; 
+          align-items: center; 
           
        }
        
@@ -285,17 +289,17 @@
           }
       
           .text-right {
-            max-width: 90%; /* Зменшуємо ширину текстового блоку */
-            margin: 0 auto; /* Центруємо текст */
-            text-align: justify; /* Вирівнюємо текст по ширині */
-            padding: 0 15px; /* Додаємо відступи для зміщення праворуч */
+            max-width: 90%; 
+            margin: 0 auto; 
+            text-align: justify; 
+            padding: 0 15px; 
             box-sizing: border-box;
             margin-left: 1px;
         }
     
         .section-description {
-            font-size: 10px; /* Робимо текст компактнішим */
-            line-height: 1.4; /* Покращуємо читабельність */
+            font-size: 10px; 
+            line-height: 1.4; 
         }
       }
     } 
@@ -305,22 +309,22 @@
     /*Стилі для карток*/
 
   .container {
-    max-width: 1200px; // Максимальна ширина сторінки
-    margin: 0 auto; // Центрування контейнера
-    padding: 0 20px; // Відступи по боках для малих екранів
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
     
   }
   
   .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // Три колонки
+    grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: auto;
     gap: 50px;
     max-width: 1200px;
     margin: 40px auto;
-    background-color: #ffffff; // Світло-сірий фон для блоку
-    padding: 40px; // Відступи всередині блоку
-    border-radius: 16px; // Злегка скруглюємо кути для загального блоку
+    background-color: #ffffff; 
+    padding: 40px; 
+    border-radius: 16px; 
     
   
     .card {
@@ -334,9 +338,9 @@
   
   
         .card-content h3 {
-         font-size: 24px; // Розмір заголовка
-         color: #000000; // Темно-зелений колір
-         font-weight: 600; // Напівжирний текст
+         font-size: 24px; 
+         color: #000000; 
+         font-weight: 600; 
          margin: 0;
          display: flex;
          align-items: center;
@@ -344,27 +348,27 @@
   
         .card-content .card-number {
     
-          font-size: 48px; // Великий розмір
-          color: rgba(75, 166, 140, 0.512); // Напівпрозорий зелений
-          font-weight: 700; // Жирний текст
+          font-size: 48px; 
+          color: rgba(75, 166, 140, 0.512); 
+          font-weight: 700; 
           line-height: 1;
         }
   
         .card-content p {
          
-          font-size: 16px; // Стандартний розмір тексту
-          color: #000000; // Темно-сірий текст
-          line-height: 1.6; // Висота рядків
+          font-size: 16px; 
+          color: #000000; 
+          line-height: 1.6; 
           margin-top: 10px;
        }
       } 
   
   /* Стилі зображень */
       .card-image img {
-       width: 100%; // Зображення займає всю ширину картки
-       height: 300px; // Автоматична висота
-       object-fit: cover; // Обрізаємо зайве
-       border-radius: 12px; // Скруглення зображення
+       width: 100%; 
+       height: 300px; 
+       object-fit: cover; 
+       border-radius: 12px; 
        margin-top: 20px;
        display: block;
      }
@@ -373,22 +377,22 @@
   
   /* Картка 1 */
     .card-1 {
-     grid-column: 1; // Перша колонка
-     grid-row: 1;    // Перший рядок
+     grid-column: 1; 
+     grid-row: 1;    
      margin-left: -60px;
     }
   
   /* Картка 2 */
     .card-2 {
-     grid-column: 2; // Друга колонка
-     grid-row: 1;    // Другий рядок
+     grid-column: 2;
+     grid-row: 1;    
      margin-top: 100px;
     }
   
   /* Картка 3 */
     .card-3 {
-     grid-column: 3; // Третя колонка
-     grid-row: 1;    // Перший рядок
+     grid-column: 3; 
+     grid-row: 1;    
      margin-top: 20px;
      margin-right: -50px;
     }
@@ -398,15 +402,16 @@
   /* Cтилі для сеції  "Історія успіху" */
 
 .success-story {
-  background-color: #2e6155; /* Темний зелений фон */
+  background-color: #2e6155; 
   padding: 60px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
 
   .container {
     display: flex;
-    flex-direction: row; /* Розташування контенту в рядок */
+    flex-direction: row; 
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
@@ -414,12 +419,12 @@
   }
 
   .story-content {
-    flex: 1; /* Контент займає половину ширини */
+    flex: 1; 
     max-width: 500px;
     margin-right: 30px;
 
     h2 {
-      font-size: 1rem;
+      font-size: 2rem;
       color: #ffffff;
       margin-bottom: 20px;
       font-weight: bold;
@@ -427,7 +432,7 @@
     }
 
     p {
-      font-size: 0.5rem;
+      font-size: 1rem;
       color: #e0e0e0;
       margin-bottom: 30px;
     }
@@ -448,7 +453,7 @@
   }
 
   .story-image {
-    flex: 1; /* Зображення займає половину ширини */
+    flex: 1; 
     max-width: 500px;
     text-align: center;
 
@@ -491,7 +496,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px; /* Відстань між зображенням і текстом */
+    gap: 30px; 
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -549,26 +554,26 @@
   @media (max-width: 480px) {
 
     .product .container {
-      flex-direction: column; /* Вертикальне розташування */
-      align-items: center; /* Центруємо текст і зображення */
+      flex-direction: column; 
+      align-items: center; 
     }
   
     .product-image img {
-      max-width: 90%; /* Зображення займає 90% ширини контейнера */
-      margin-bottom: 20px; /* Відступ між зображенням і текстом */
+      max-width: 90%; 
+      margin-bottom: 20px; 
     }
   
     .product-content {
-      text-align: center; /* Центруємо текст */
+      text-align: center; 
     }
   
     .product-content h2 {
-      font-size: 1.8rem; /* Зменшений заголовок */
+      font-size: 1.8rem; 
     }
   
     .product-content p {
       font-size: 1rem;
-      margin-bottom: 20px; /* Відступи між текстами */
+      margin-bottom: 20px; 
     }
     
     .btn {
@@ -591,12 +596,13 @@
   background-color: #2e6155;
   padding: 50px 20px;
   color: #ffffff;
+  border-radius: 15px;
 
   .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Розташування контенту */
+    justify-content: space-between; 
     align-items: flex-start;
   }
 

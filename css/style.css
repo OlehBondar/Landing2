@@ -90,19 +90,19 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; /* Вертикальне розташування пунктів меню */
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; /* Центруємо навігаційні елементи */
+            align-items: center;
     width: 100%;
-    gap: 3px; /* Зменшуємо відстань між елементами меню */
+    gap: 3px;
   }
   .header .navbar a {
     text-align: center;
-    width: 100%; /* Кожен пункт меню займає всю ширину */
-    padding: 5px 0; /* Зменшуємо вертикальні відступи для компактності */
-    margin: 0; /* Прибираємо зовнішні відступи */
-    font-size: 0.9rem; /* Робимо шрифт трохи меншим для мобільних екранів */
+    width: 100%;
+    padding: 5px 0;
+    margin: 0;
+    font-size: 0.9rem;
   }
   .header .auth-buttons {
     display: -webkit-box;
@@ -111,37 +111,39 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; /* Вертикальне розташування кнопок */
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; /* Центруємо кнопки */
-    gap: 5px; /* Зменшуємо відстань між кнопками */
+            align-items: center;
+    gap: 5px;
     width: 100%;
   }
   .header .auth-buttons .btn {
-    padding: 8px 15px; /* Менші відступи для компактності на мобільних */
-    font-size: 0.85rem; /* Трохи зменшуємо шрифт для кнопок */
-    width: 80%; /* Кнопки займають 90% ширини для зручності користування */
-    margin: 0 auto; /* Центруємо кнопки */
+    padding: 8px 15px;
+    font-size: 0.85rem;
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
   .header .logo {
     text-align: center;
-    font-size: 2.5rem; /* Збільшуємо розмір логотипу для привертання уваги */
-    margin-bottom: 15px; /* Відділяємо логотип від навігації */
+    font-size: 2.5rem;
+    margin-bottom: 15px;
   }
 }
 
 /*Стилі для секції Hero*/
 .hero {
+  position: relative;
   background: url("../images/hero.jpeg") no-repeat center center/cover;
   color: #fff;
   text-align: left;
-  padding: 100px 0;
+  padding: 100px 15px;
   position: relative;
   width: 100%;
+  border-radius: 10px;
   /* Стилі для мобільних пристроїв */
 }
 .hero .container {
@@ -155,15 +157,11 @@
   line-height: 1.2;
   margin-bottom: 20px;
   color: #01996d;
-  position: relative;
-  left: -200px;
 }
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
   color: #484848;
-  position: relative;
-  left: -200px;
 }
 .hero .btn-primary {
   font-size: 1.2rem;
@@ -176,8 +174,6 @@
   cursor: pointer;
   -webkit-transition: background-color 0.9s ease;
   transition: background-color 0.9s ease;
-  position: relative;
-  left: -200px;
 }
 .hero .btn-primary:hover {
   background-color: #016649;
@@ -269,26 +265,26 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; /* Встановлюємо вертикальне вирівнювання */
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; /* Центруємо елементи */
+            align-items: center;
   }
   .how-it-works h2 {
     font-size: 18px !important;
   }
   .how-it-works .text-right {
-    max-width: 90%; /* Зменшуємо ширину текстового блоку */
-    margin: 0 auto; /* Центруємо текст */
-    text-align: justify; /* Вирівнюємо текст по ширині */
-    padding: 0 15px; /* Додаємо відступи для зміщення праворуч */
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 0 15px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     margin-left: 1px;
   }
   .how-it-works .section-description {
-    font-size: 10px; /* Робимо текст компактнішим */
-    line-height: 1.4; /* Покращуємо читабельність */
+    font-size: 10px;
+    line-height: 1.4;
   }
 }
 
@@ -403,7 +399,7 @@
 
 /* Cтилі для сеції  "Історія успіху" */
 .success-story {
-  background-color: #2e6155; /* Темний зелений фон */
+  background-color: #2e6155;
   padding: 60px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -414,6 +410,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 15px;
   /*Стилі для мобільних пристроїав*/
 }
 .success-story .container {
@@ -423,7 +420,7 @@
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
-          flex-direction: row; /* Розташування контенту в рядок */
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -436,19 +433,19 @@
 .success-story .story-content {
   -webkit-box-flex: 1;
       -ms-flex: 1;
-          flex: 1; /* Контент займає половину ширини */
+          flex: 1;
   max-width: 500px;
   margin-right: 30px;
 }
 .success-story .story-content h2 {
-  font-size: 1rem;
+  font-size: 2rem;
   color: #ffffff;
   margin-bottom: 20px;
   font-weight: bold;
   line-height: 1.2;
 }
 .success-story .story-content p {
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: #e0e0e0;
   margin-bottom: 30px;
 }
@@ -468,7 +465,7 @@
 .success-story .story-image {
   -webkit-box-flex: 1;
       -ms-flex: 1;
-          flex: 1; /* Зображення займає половину ширини */
+          flex: 1;
   max-width: 500px;
   text-align: center;
 }
@@ -509,7 +506,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 30px; /* Відстань між зображенням і текстом */
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -566,24 +563,24 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; /* Вертикальне розташування */
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; /* Центруємо текст і зображення */
+            align-items: center;
   }
   .product .product-image img {
-    max-width: 90%; /* Зображення займає 90% ширини контейнера */
-    margin-bottom: 20px; /* Відступ між зображенням і текстом */
+    max-width: 90%;
+    margin-bottom: 20px;
   }
   .product .product-content {
-    text-align: center; /* Центруємо текст */
+    text-align: center;
   }
   .product .product-content h2 {
-    font-size: 1.8rem; /* Зменшений заголовок */
+    font-size: 1.8rem;
   }
   .product .product-content p {
     font-size: 1rem;
-    margin-bottom: 20px; /* Відступи між текстами */
+    margin-bottom: 20px;
   }
   .product .btn {
     display: block;
@@ -603,6 +600,7 @@
   background-color: #2e6155;
   padding: 50px 20px;
   color: #ffffff;
+  border-radius: 15px;
 }
 .footer .container {
   max-width: 1200px;
@@ -612,7 +610,7 @@
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; /* Розташування контенту */
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
