@@ -132,14 +132,16 @@ html, body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 5px;
+    gap: 7px;
+    margin-right: 15px;
     width: 100%;
+    padding: 0 10px;
   }
   .header .auth-buttons .btn {
-    padding: 8px 15px;
-    font-size: 0.85rem;
-    width: 80%;
-    margin: 0 auto;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 480px;
     text-align: center;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -163,8 +165,8 @@ html, body {
 }
 .hero .content-wrapper {
   padding: 20px;
-  border-radius: 10px; /* Округлення */
-  text-align: left; /* Вирівнювання тексту */
+  border-radius: 10px;
+  text-align: left;
   margin-left: -30px;
 }
 .hero h1 {
@@ -407,13 +409,22 @@ html, body {
 
 @media (max-width: 480px) {
   .cards {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+    padding: 15px;
   }
   .cards .card {
-    padding: 5px;
+    width: 100%;
+    padding: 10px;
   }
   .cards .card-content h3 {
     font-size: 1rem;
@@ -422,7 +433,9 @@ html, body {
     font-size: 0.7rem;
   }
   .cards .card-image img {
-    height: 200px;
+    width: 100%;
+    height: auto;
+    max-width: 480px;
   }
 }
 /* Cтилі для сеції  "Історія успіху" */
