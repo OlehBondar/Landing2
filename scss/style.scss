@@ -1,4 +1,10 @@
   
+
+  html {
+  scroll-behavior: smooth;
+   }
+
+
   /*Стилі для хедера та навігації*/
 
   .header {
@@ -19,14 +25,23 @@
   
     .logo {
      
-      margin-right: 30px;
-      font-size: 1.5rem;
+      margin-right: 20px;
+      margin-left: 10px;
+      font-size: 1.8rem;
       font-weight: bold;
       color: #01996d; 
+      padding: 8px 12px;
+      border: 1.8px solid #01996d;
+      border-radius: 8px;
+      background-color: #ffffff;
+      transform: all 0.3s ease;
       
   
       &:hover {
         text-decoration: none;
+        color: #ffffff;
+        background-color: #01996d;
+        border-color: #017c5a;
       
       }
     }
@@ -37,7 +52,7 @@
       gap: 40px;
   
       a {
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-decoration: none;
         color: #333333; 
         text-decoration: none;
@@ -58,7 +73,7 @@
         text-decoration: none;
         padding: 10px 20px;
         border-radius: 5px;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         font-weight: bold;
         text-align: center;
         border: 1px solid #01996d; 
@@ -143,12 +158,15 @@
     position: relative;
     width: 100%;
     border-radius: 10px;
+    height: 500px;
     
 
     .container {
-      max-width: 800px;
-      margin: 0 auto;
-      position: relative;
+      position: absolute;
+      top: 30%;
+      left: 7%;
+      transform: translateY(-30%);
+      max-width: 600px;
     }
   
     h1 {
@@ -179,6 +197,7 @@
       cursor: pointer;
       transition: background-color 0.9s ease;
       
+    
   
       &:hover {
         background-color: darken(#01996d, 10%); 
@@ -187,11 +206,13 @@
   
   /* Стилі для мобільних пристроїв */
     @media (max-width: 480px) {
+
       .container {
         background: rgba(255, 255, 255, 0.6); 
         padding: 20px;
         border-radius: 10px;
         text-align: center; 
+        margin-top: 60%;
       }
   
       h1 {
@@ -213,8 +234,13 @@
         text-align: center; 
         left: 0; 
      }
-   }  
-  } 
+   } 
+  }
+      
+        
+         
+    
+    
 
     /*Стилі для секції How it works*/
   
@@ -230,11 +256,12 @@
                display: flex; 
                justify-content: space-between; 
                align-items: center; 
-               gap: 20px;
+               gap: 30px;
   
                 .text-left {
                   flex: 1; 
                   text-align: left;
+                  margin-left: 15px;
     
                   .section-label {
                    font-size: 12px;
@@ -256,15 +283,16 @@
                   flex: 1; 
                   text-align: left;
                   margin-top: 5px;
-                  margin-right: -50px;
+                  margin-right: -65px;
     
                     .section-description {
-                      font-size: 16px;
+                      font-size: 19px;
                       color: #555;
                       line-height: 1.4;
                       margin: 0;
                    }
                 }
+
               }
            }  
                  
@@ -318,13 +346,13 @@
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: auto;
-    gap: 50px;
+    gap: 100px;
     max-width: 1200px;
     margin: 40px auto;
     background-color: #ffffff; 
     padding: 40px; 
     border-radius: 16px; 
+    justify-content: center;
     
   
     .card {
@@ -337,26 +365,30 @@
        margin-bottom: 20px;
   
   
-        .card-content h3 {
+         h3 {
          font-size: 24px; 
          color: #000000; 
          font-weight: 600; 
          margin: 0;
-         display: flex;
+         text-align: center;
          align-items: center;
+         flex-wrap: wrap;
+         display: block;
+       
+  
+           .card-number {
+    
+            font-size: 60px; 
+            color: #20c99933; 
+            font-weight: 700; 
+            line-height: 1;
+            margin-right: 10px;
+         }
        }
   
-        .card-content .card-number {
-    
-          font-size: 48px; 
-          color: rgba(75, 166, 140, 0.512); 
-          font-weight: 700; 
-          line-height: 1;
-        }
-  
-        .card-content p {
+         p {
          
-          font-size: 16px; 
+          font-size: 18px; 
           color: #000000; 
           line-height: 1.6; 
           margin-top: 10px;
@@ -366,11 +398,12 @@
   /* Стилі зображень */
       .card-image img {
        width: 100%; 
-       height: 300px; 
+       height: 280px; 
        object-fit: cover; 
        border-radius: 12px; 
        margin-top: 20px;
        display: block;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
      }
    }
   
@@ -379,25 +412,47 @@
     .card-1 {
      grid-column: 1; 
      grid-row: 1;    
-     margin-left: -60px;
+     margin-left: 0;
     }
   
   /* Картка 2 */
     .card-2 {
      grid-column: 2;
      grid-row: 1;    
-     margin-top: 100px;
+     margin-top: 20px;
     }
   
   /* Картка 3 */
     .card-3 {
      grid-column: 3; 
      grid-row: 1;    
-     margin-top: 20px;
-     margin-right: -50px;
+     margin-right: 0;
     }
   }
   
+  @media (max-width: 480px) {
+    .cards {
+      grid-template-columns: 1fr; 
+      gap: 20px; 
+      padding: 20px;
+  
+      .card {
+        padding: 15px; 
+      }
+  
+      .card-content h3 {
+        font-size: 1.2rem; 
+      }
+  
+      .card-content p {
+        font-size: 0.9rem; 
+      }
+  
+      .card-image img {
+        height: 200px; 
+      }
+    }
+  }
  
   /* Cтилі для сеції  "Історія успіху" */
 
@@ -432,14 +487,14 @@
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #e0e0e0;
       margin-bottom: 30px;
     }
 
     .btn {
       text-decoration: none;
-      padding: 5px 10px;
+      padding: 10px 15px;
       background-color: #007b5e;
       color: #ffffff;
       font-weight: bold;
@@ -593,39 +648,48 @@
 
 /* Футер */
 .footer {
-  background-color: #2e6155;
-  padding: 50px 20px;
-  color: #ffffff;
-  border-radius: 15px;
+  background-color: #2a5952;
+  color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: left;
+  min-height: 200px;
 
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between; 
-    align-items: flex-start;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
   }
 
   .footer-links {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; 
+    gap: 15px; 
+    padding-left: 0;
 
-    h3 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 30px;
-      color: #ffffff;
-    }
+    .contact-item {
+      display: flex;
+      align-items: center; 
+      font-size: 1.2rem;
 
-    a {
-      font-size: 16px;
-      color: #ffffff;
-      text-decoration: none;
-      transition: color 0.3s ease;
+      i {
+        margin-right: 10px; 
+        font-size: 1.2rem; 
+        color: #ffffff; 
+      }
 
-      &:hover {
-        color: #d4d5d5;
+      a, span {
+        color: #ffffff; 
+        text-decoration: none; 
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #ffffff; 
+        }
       }
     }
   }

@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 /*Стилі для хедера та навігації*/
 .header {
   background-color: #ffffff;
@@ -22,13 +26,23 @@
   padding: 0 20px;
 }
 .header .logo {
-  margin-right: 30px;
-  font-size: 1.5rem;
+  margin-right: 20px;
+  margin-left: 10px;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #01996d;
+  padding: 8px 12px;
+  border: 1.8px solid #01996d;
+  border-radius: 8px;
+  background-color: #ffffff;
+  -webkit-transform: all 0.3s ease;
+          transform: all 0.3s ease;
 }
 .header .logo:hover {
   text-decoration: none;
+  color: #ffffff;
+  background-color: #01996d;
+  border-color: #017c5a;
 }
 .header .navbar {
   display: -webkit-box;
@@ -37,7 +51,7 @@
   gap: 40px;
 }
 .header .navbar a {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: #333333;
   text-decoration: none;
@@ -57,7 +71,7 @@
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: bold;
   text-align: center;
   border: 1px solid #01996d;
@@ -144,12 +158,16 @@
   position: relative;
   width: 100%;
   border-radius: 10px;
+  height: 500px;
   /* Стилі для мобільних пристроїв */
 }
 .hero .container {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+  max-width: 600px;
 }
 .hero h1 {
   font-size: 3rem;
@@ -184,6 +202,7 @@
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    margin-top: 60%;
   }
   .hero h1 {
     font-size: 1.8rem;
@@ -222,13 +241,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 .how-it-works .container .text-content .text-left {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: left;
+  margin-left: 15px;
 }
 .how-it-works .container .text-content .text-left .section-label {
   font-size: 12px;
@@ -249,10 +269,10 @@
           flex: 1;
   text-align: left;
   margin-top: 5px;
-  margin-right: -50px;
+  margin-right: -65px;
 }
 .how-it-works .container .text-content .text-right .section-description {
-  font-size: 16px;
+  font-size: 19px;
   color: #555;
   line-height: 1.4;
   margin: 0;
@@ -298,34 +318,20 @@
 .cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 50px 1fr 50px 1fr;
+  -ms-grid-columns: 1fr 100px 1fr 100px 1fr;
   grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: auto;
-  grid-template-rows: auto;
-  gap: 50px;
+  gap: 100px;
   max-width: 1200px;
   margin: 40px auto;
   background-color: #ffffff;
   padding: 40px;
   border-radius: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   /* Картка 1 */
   /* Картка 2 */
   /* Картка 3 */
-}
-
-.cards > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-
-.cards > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-}
-
-.cards > *:nth-child(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
 }
 .cards .card {
   text-align: center;
@@ -341,62 +347,85 @@
 .cards .card .card-content {
   margin-bottom: 20px;
 }
-.cards .card .card-content .card-content h3 {
+.cards .card .card-content h3 {
   font-size: 24px;
   color: #000000;
   font-weight: 600;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: block;
 }
-.cards .card .card-content .card-content .card-number {
-  font-size: 48px;
-  color: rgba(75, 166, 140, 0.512);
+.cards .card .card-content h3 .card-number {
+  font-size: 60px;
+  color: rgba(32, 201, 153, 0.2);
   font-weight: 700;
   line-height: 1;
+  margin-right: 10px;
 }
-.cards .card .card-content .card-content p {
-  font-size: 16px;
+.cards .card .card-content p {
+  font-size: 18px;
   color: #000000;
   line-height: 1.6;
   margin-top: 10px;
 }
 .cards .card .card-image img {
   width: 100%;
-  height: 300px;
+  height: 280px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 12px;
   margin-top: 20px;
   display: block;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .cards .card-1 {
   -ms-grid-column: 1;
   grid-column: 1;
   -ms-grid-row: 1;
   grid-row: 1;
-  margin-left: -60px;
+  margin-left: 0;
 }
 .cards .card-2 {
   -ms-grid-column: 2;
   grid-column: 2;
   -ms-grid-row: 1;
   grid-row: 1;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 .cards .card-3 {
   -ms-grid-column: 3;
   grid-column: 3;
   -ms-grid-row: 1;
   grid-row: 1;
-  margin-top: 20px;
-  margin-right: -50px;
+  margin-right: 0;
 }
 
+@media (max-width: 480px) {
+  .cards {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .cards .card {
+    padding: 15px;
+  }
+  .cards .card-content h3 {
+    font-size: 1.2rem;
+  }
+  .cards .card-content p {
+    font-size: 0.9rem;
+  }
+  .cards .card-image img {
+    height: 200px;
+  }
+}
 /* Cтилі для сеції  "Історія успіху" */
 .success-story {
   background-color: #2e6155;
@@ -445,13 +474,13 @@
   line-height: 1.2;
 }
 .success-story .story-content p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #e0e0e0;
   margin-bottom: 30px;
 }
 .success-story .story-content .btn {
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 10px 15px;
   background-color: #007b5e;
   color: #ffffff;
   font-weight: bold;
@@ -597,23 +626,20 @@
 
 /* Футер */
 .footer {
-  background-color: #2e6155;
-  padding: 50px 20px;
-  color: #ffffff;
-  border-radius: 15px;
+  background-color: #2a5952;
+  color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: left;
+  min-height: 200px;
 }
 .footer .container {
   max-width: 1200px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+}
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 .footer .footer-links {
   display: -webkit-box;
@@ -623,21 +649,29 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  padding-left: 0;
 }
-.footer .footer-links h3 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 30px;
+.footer .footer-links .contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+}
+.footer .footer-links .contact-item i {
+  margin-right: 10px;
+  font-size: 1.2rem;
   color: #ffffff;
 }
-.footer .footer-links a {
-  font-size: 16px;
+.footer .footer-links .contact-item a, .footer .footer-links .contact-item span {
   color: #ffffff;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.footer .footer-links a:hover {
-  color: #d4d5d5;
+.footer .footer-links .contact-item a:hover, .footer .footer-links .contact-item span:hover {
+  color: #ffffff;
 }
