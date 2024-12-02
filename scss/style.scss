@@ -1,528 +1,636 @@
   
 
   html {
-  scroll-behavior: smooth;
-   }
-
-
-  /*Стилі для хедера та навігації*/
-
-  .header {
-    background-color: #ffffff; 
-    border-bottom: 1px solid #e5e5e5; 
-    padding: 15px 0;
-  
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-
-    }
-  
-    .logo {
-     
-      margin-right: 20px;
-      margin-left: 10px;
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #01996d; 
-      padding: 8px 12px;
-      border: 1.8px solid #01996d;
-      border-radius: 8px;
-      background-color: #ffffff;
-      transform: all 0.3s ease;
-      
-  
-      &:hover {
-        text-decoration: none;
-        color: #ffffff;
-        background-color: #01996d;
-        border-color: #017c5a;
-      
-      }
-    }
+    scroll-behavior: smooth;
+     }
   
   
-    .navbar {
-      display: flex;
-      gap: 40px;
+    /*Стилі для хедера та навігації*/
   
-      a {
-        font-size: 1.2rem;
-        text-decoration: none;
-        color: #333333; 
-        text-decoration: none;
-        transition: color 0.3s ease;
-  
-        &:hover {
-          color: #01996d; 
-        }
-      }
-    }
-  
-   
-    .auth-buttons {
-      display: flex;
-      gap: 10px;
-  
-      .btn {
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 1.1rem;
-        font-weight: bold;
-        text-align: center;
-        border: 1px solid #01996d; 
-        background: transparent; 
-        color: #01996d; 
-        cursor: pointer;
-        transition: background 0.9s ease, color 0.9s ease;
-  
-        &:hover {
-          background: #01996d; 
-          color: #ffffff;
-        }
-      }
-
-      .btn:first-child {
-        border: 2px solid #01996d;
-      }
-  
-      .btn-primary {
-        background: #01996d; 
-        color: #ffffff; 
-        border: none;
-  
-        &:hover {
-          background: darken (#01996d, 10%); 
-        }
-      }
-    }
-
-    /*Адаптація для мобільних пристроїв*/
-
-    @media (max-width: 480px) {
-      .navbar {
+    .header {
+      background-color: #ffffff; 
+      border-bottom: 1px solid #e5e5e5; 
+      padding: 15px 0;
+    
+      .container {
         display: flex;
-        flex-direction: column; 
-        align-items: center; 
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        gap: 3px; 
-    
-        a {
-          text-align: center;
-          width: 100%; 
-          padding: 5px 0; 
-          margin: 0; 
-          font-size: 0.9rem; 
-        }
-      }
-    
-      .auth-buttons {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        gap: 5px; 
-        width: 100%;
-    
-        .btn {
-          padding: 8px 15px; 
-          font-size: 0.85rem; 
-          width: 80%; 
-          margin: 0 auto; 
-          text-align: center;
-          box-sizing: border-box;
-        }
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+  
       }
     
       .logo {
-        text-align: center;
-        font-size: 2.5rem; 
-        margin-bottom: 15px; 
-      }
-    }
-  }    
-
-   /*Стилі для секції Hero*/
-
-  .hero {
-    position: relative;
-    background: url('../images/hero.jpeg') no-repeat center center / cover; 
-    color: #fff; 
-    text-align: left; 
-    padding: 100px 15px; 
-    position: relative;
-    width: 100%;
-    border-radius: 10px;
-    height: 500px;
-    
-
-    .container {
-      position: absolute;
-      top: 30%;
-      left: 7%;
-      transform: translateY(-30%);
-      max-width: 600px;
-    }
-  
-    h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      color: #01996d;
-      
-    }
-  
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      color: #484848;
-      
-    }
-    
-  
-    .btn-primary {
-      font-size: 1.2rem;
-      padding: 15px 30px;
-      background: #01996d; 
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background-color 0.9s ease;
-      
-    
-  
-      &:hover {
-        background-color: darken(#01996d, 10%); 
-      }
-    }
-  
-  /* Стилі для мобільних пристроїв */
-    @media (max-width: 480px) {
-
-      .container {
-        background: rgba(255, 255, 255, 0.6); 
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center; 
-        margin-top: 60%;
-      }
-  
-      h1 {
-        font-size: 1.8rem; 
-        text-align: center; 
-        left: 0; 
-      }
-  
-      p {
-        font-size: 0.9rem; 
-        text-align: center; 
-        left: 0; 
-      }
-     
-
-      .btn-primary {
-        font-size: 0.9rem; 
-        padding: 10px 15px; 
-        text-align: center; 
-        left: 0; 
-     }
-   } 
-  }
-      
+       
+        margin-right: 20px;
+        margin-left: 10px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #01996d; 
+        padding: 8px 12px;
+        border: 1.8px solid #01996d;
+        border-radius: 8px;
+        background-color: #ffffff;
+        transform: all 0.3s ease;
         
-         
+    
+        &:hover {
+          text-decoration: none;
+          color: #ffffff;
+          background-color: #01996d;
+          border-color: #017c5a;
+        
+        }
+      }
     
     
-
-    /*Стилі для секції How it works*/
+      .navbar {
+        display: flex;
+        gap: 40px;
+    
+        a {
+          font-size: 1.2rem;
+          text-decoration: none;
+          color: #333333; 
+          text-decoration: none;
+          transition: color 0.3s ease;
+    
+          &:hover {
+            color: #01996d; 
+          }
+        }
+      }
+    
+     
+      .auth-buttons {
+        display: flex;
+        gap: 10px;
+    
+        .btn {
+          text-decoration: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 1.1rem;
+          font-weight: bold;
+          text-align: center;
+          border: 1px solid #01996d; 
+          background: transparent; 
+          color: #01996d; 
+          cursor: pointer;
+          transition: background 0.9s ease, color 0.9s ease;
+    
+          &:hover {
+            background: #01996d; 
+            color: #ffffff;
+          }
+        }
   
-    .how-it-works {
-      padding: 50px 0; 
-      background-color: #ffffff; 
+        .btn:first-child {
+          border: 2px solid #01996d;
+        }
     
-            .container {
-             max-width: 1200px;
-             margin: 0 auto; 
+        .btn-primary {
+          background: #01996d; 
+          color: #ffffff; 
+          border: none;
     
-              .text-content {
-               display: flex; 
-               justify-content: space-between; 
-               align-items: center; 
-               gap: 30px;
+          &:hover {
+            background: darken (#01996d, 10%); 
+          }
+        }
+      }
   
-                .text-left {
-                  flex: 1; 
-                  text-align: left;
-                  margin-left: 15px;
-    
-                  .section-label {
-                   font-size: 12px;
-                   color: #000000;
-                   text-transform: uppercase;
-                   margin-bottom: 0;
-                 }
-    
-                  h2 {
-                   font-size: 36px;
-                   color: #01996d;
-                   font-weight: bold;
-                   line-height: 1.6;
-                   margin-top: 0;
-                 }
-               }     
-    
-                .text-right {
-                  flex: 1; 
-                  text-align: left;
-                  margin-top: 5px;
-                  margin-right: -65px;
-    
-                    .section-description {
-                      font-size: 19px;
-                      color: #555;
-                      line-height: 1.4;
-                      margin: 0;
-                   }
-                }
-
-              }
-           }  
-                 
-       
-
-                 
-                
-       
-
+      /*Адаптація для мобільних пристроїв*/
+  
       @media (max-width: 480px) {
-          
-
-        .text-content {
+        .navbar {
           display: flex;
           flex-direction: column; 
           align-items: center; 
-          
-       }
+          width: 100%;
+          gap: 3px; 
+      
+          a {
+            text-align: center;
+            width: 100%; 
+            padding: 5px 0; 
+            margin: 0; 
+            font-size: 0.9rem; 
+          }
+        }
+      
+        .auth-buttons {
+          display: flex;
+          flex-direction: column; 
+          align-items: center; 
+          gap: 5px; 
+          width: 100%;
+      
+          .btn {
+            padding: 8px 15px; 
+            font-size: 0.85rem; 
+            width: 80%; 
+            margin: 0 auto; 
+            text-align: center;
+            box-sizing: border-box;
+          }
+        }
+      
+        .logo {
+          text-align: center;
+          font-size: 2.5rem; 
+          margin-bottom: 15px; 
+        }
+      }
+    }    
+  
+     /*Стилі для секції Hero*/
+  
+    .hero {
+      position: relative;
+      background: url('../images/hero.jpeg') no-repeat center center / cover; 
+      color: #fff; 
+      text-align: left; 
+      padding: 100px 15px; 
+      position: relative;
+      width: 100%;
+      border-radius: 10px;
+      height: 500px;
+      
+  
+      .container {
+        position: absolute;
+        top: 30%;
+        left: 7%;
+        transform: translateY(-30%);
+        max-width: 600px;
+      }
+    
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        color: #01996d;
+        
+      }
+    
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #484848;
+        
+      }
+      
+    
+      .btn-primary {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        background: #01996d; 
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.9s ease;
+        
+      
+    
+        &:hover {
+          background-color: darken(#01996d, 10%); 
+        }
+      }
+    
+    /* Стилі для мобільних пристроїв */
+      @media (max-width: 480px) {
+  
+        .container {
+          background: rgba(255, 255, 255, 0.6); 
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center; 
+          margin-top: 60%;
+        }
+    
+        h1 {
+          font-size: 1.8rem; 
+          text-align: center; 
+          left: 0; 
+        }
+    
+        p {
+          font-size: 0.9rem; 
+          text-align: center; 
+          left: 0; 
+        }
        
-          h2 {
-              font-size: 18px !important;
+  
+        .btn-primary {
+          font-size: 0.9rem; 
+          padding: 10px 15px; 
+          text-align: center; 
+          left: 0; 
+       }
+     } 
+    }
+        
+          
+           
+      
+      
+  
+      /*Стилі для секції How it works*/
+    
+      .how-it-works {
+        padding: 50px 0; 
+        background-color: #ffffff; 
+      
+              .container {
+               max-width: 1200px;
+               margin: 0 auto; 
+      
+                .text-content {
+                 display: flex; 
+                 justify-content: space-between; 
+                 align-items: center; 
+                 gap: 30px;
+    
+                  .text-left {
+                    flex: 1; 
+                    text-align: left;
+                    margin-left: 15px;
+      
+                    .section-label {
+                     font-size: 12px;
+                     color: #000000;
+                     text-transform: uppercase;
+                     margin-bottom: 0;
+                   }
+      
+                    h2 {
+                     font-size: 36px;
+                     color: #01996d;
+                     font-weight: bold;
+                     line-height: 1.6;
+                     margin-top: 0;
+                   }
+                 }     
+      
+                  .text-right {
+                    flex: 1; 
+                    text-align: left;
+                    margin-top: 5px;
+                    margin-right: -65px;
+      
+                      .section-description {
+                        font-size: 19px;
+                        color: #555;
+                        line-height: 1.4;
+                        margin: 0;
+                     }
+                  }
+  
+                }
+             }  
+                   
+         
+  
+                   
+                  
+         
+  
+        @media (max-width: 480px) {
+            
+  
+          .text-content {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            
+         }
+         
+            h2 {
+                font-size: 18px !important;
+            }
+        
+            .text-right {
+              max-width: 90%; 
+              margin: 0 auto; 
+              text-align: justify; 
+              padding: 0 15px; 
+              box-sizing: border-box;
+              margin-left: 1px;
           }
       
-          .text-right {
-            max-width: 90%; 
-            margin: 0 auto; 
-            text-align: justify; 
-            padding: 0 15px; 
-            box-sizing: border-box;
-            margin-left: 1px;
+          .section-description {
+              font-size: 10px; 
+              line-height: 1.4; 
+          }
         }
+      } 
+        
+      
+      
+      /*Стилі для карток*/
+  
+    .container {
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 0 20px; 
+      
+    }
     
-        .section-description {
-            font-size: 10px; 
-            line-height: 1.4; 
-        }
-      }
-    } 
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 100px;
+      max-width: 1200px;
+      margin: 40px auto;
+      background-color: #ffffff; 
+      padding: 40px; 
+      border-radius: 16px; 
+      justify-content: center;
       
     
-    
-    /*Стилі для карток*/
-
-  .container {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-    
-  }
-  
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 100px;
-    max-width: 1200px;
-    margin: 40px auto;
-    background-color: #ffffff; 
-    padding: 40px; 
-    border-radius: 16px; 
-    justify-content: center;
-    
-  
-    .card {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-   
-  
-      .card-content {
-       margin-bottom: 20px;
-  
-  
-         h3 {
-         font-size: 24px; 
-         color: #000000; 
-         font-weight: 600; 
-         margin: 0;
-         text-align: center;
-         align-items: center;
-         flex-wrap: wrap;
-         display: block;
-       
-  
-           .card-number {
-    
-            font-size: 60px; 
-            color: #20c99933; 
-            font-weight: 700; 
-            line-height: 1;
-            margin-right: 10px;
-         }
-       }
-  
-         p {
-         
-          font-size: 18px; 
-          color: #000000; 
-          line-height: 1.6; 
-          margin-top: 10px;
-       }
-      } 
-  
-  /* Стилі зображень */
-      .card-image img {
-       width: 100%; 
-       height: 280px; 
-       object-fit: cover; 
-       border-radius: 12px; 
-       margin-top: 20px;
-       display: block;
-       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
-     }
-   }
-  
-  
-  /* Картка 1 */
-    .card-1 {
-     grid-column: 1; 
-     grid-row: 1;    
-     margin-left: 0;
-    }
-  
-  /* Картка 2 */
-    .card-2 {
-     grid-column: 2;
-     grid-row: 1;    
-     margin-top: 20px;
-    }
-  
-  /* Картка 3 */
-    .card-3 {
-     grid-column: 3; 
-     grid-row: 1;    
-     margin-right: 0;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .cards {
-      grid-template-columns: 1fr; 
-      gap: 20px; 
-      padding: 20px;
-  
       .card {
-        padding: 15px; 
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+     
+    
+        .card-content {
+         margin-bottom: 20px;
+    
+    
+           h3 {
+           font-size: 24px; 
+           color: #000000; 
+           font-weight: 600; 
+           margin: 0;
+           text-align: center;
+           align-items: center;
+           flex-wrap: wrap;
+           display: block;
+         
+    
+             .card-number {
+      
+              font-size: 60px; 
+              color: #20c99933; 
+              font-weight: 700; 
+              line-height: 1;
+              margin-right: 10px;
+           }
+         }
+    
+           p {
+           
+            font-size: 18px; 
+            color: #000000; 
+            line-height: 1.6; 
+            margin-top: 10px;
+         }
+        } 
+    
+    /* Стилі зображень */
+        .card-image img {
+         width: 100%; 
+         height: 280px; 
+         object-fit: cover; 
+         border-radius: 12px; 
+         margin-top: 20px;
+         display: block;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+       }
+     }
+    
+    
+    /* Картка 1 */
+      .card-1 {
+       grid-column: 1; 
+       grid-row: 1;    
+       margin-left: 0;
       }
-  
-      .card-content h3 {
-        font-size: 1.2rem; 
+    
+    /* Картка 2 */
+      .card-2 {
+       grid-column: 2;
+       grid-row: 1;    
+       margin-top: 20px;
       }
-  
-      .card-content p {
-        font-size: 0.9rem; 
-      }
-  
-      .card-image img {
-        height: 200px; 
+    
+    /* Картка 3 */
+      .card-3 {
+       grid-column: 3; 
+       grid-row: 1;    
+       margin-right: 0;
       }
     }
-  }
- 
-  /* Cтилі для сеції  "Історія успіху" */
-
-.success-story {
-  background-color: #2e6155; 
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-
-  .container {
+    
+    @media (max-width: 480px) {
+      .cards {
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+        padding: 20px;
+    
+        .card {
+          padding: 5px; 
+        }
+    
+        .card-content h3 {
+          font-size: 1rem; 
+        }
+    
+        .card-content p {
+          font-size: 0.7rem; 
+        }
+    
+        .card-image img {
+          height: 200px; 
+        }
+      }
+    }
+   
+    /* Cтилі для сеції  "Історія успіху" */
+  
+  .success-story {
+    background-color: #2e6155; 
+    padding: 60px 20px;
     display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .story-content {
-    flex: 1; 
-    max-width: 500px;
-    margin-right: 30px;
-
-    h2 {
-      font-size: 2rem;
-      color: #ffffff;
-      margin-bottom: 20px;
-      font-weight: bold;
-      line-height: 1.2;
+    border-radius: 15px;
+  
+    .container {
+      display: flex;
+      flex-direction: row; 
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-
-    p {
-      font-size: 1.1rem;
-      color: #e0e0e0;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      text-decoration: none;
-      padding: 10px 15px;
-      background-color: #007b5e;
-      color: #ffffff;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: #00573d;
+  
+    .story-content {
+      flex: 1; 
+      max-width: 500px;
+      margin-right: 30px;
+  
+      h2 {
+        font-size: 2rem;
+        color: #ffffff;
+        margin-bottom: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        margin-bottom: 30px;
+      }
+  
+      .btn {
+        text-decoration: none;
+        padding: 10px 15px;
+        background-color: #007b5e;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #00573d;
+        }
       }
     }
-  }
-
-  .story-image {
-    flex: 1; 
-    max-width: 500px;
-    text-align: center;
-
-    img {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  }
   
-     /*Стилі для мобільних пристроїав*/
-
-     @media (max-width: 480px) {
-
+    .story-image {
+      flex: 1; 
+      max-width: 500px;
+      text-align: center;
+  
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+    
+       /*Стилі для мобільних пристроїав*/
+  
+       @media (max-width: 480px) {
+  
+        .btn {
+          display:block ;
+          width: 100;
+          max-width: 300px;
+          margin: 20px auto;
+          font-size: 1rem;
+          padding: 12px 20px;
+  
+           &:hover {
+            background-color: #00573d;
+         }
+        } 
+      }
+    }    
+    
+      
+    
+        
+  
+  /* Секція "Продукт" */
+  .product {
+    padding: 60px 20px;
+    background-color: #ffffff;
+  
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px; 
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .product-image {
+      flex: 1;
+      text-align: center;
+  
+      img {
+        width: 300px;
+        max-width: 300px;
+        height: auto;
+        border-radius: 18px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+        background-color: #01996D33;
+      }
+    }
+  
+    .product-content {
+      flex: 1;
+      text-align: left;
+  
+      h2 {
+        font-size: 2.5rem;
+        color: #2e6155;
+        margin-bottom: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 30px;
+      }
+  
+      .btn {
+        text-decoration: none;
+        padding: 15px 30px;
+        background-color: #007b5e;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #00573d;
+        }
+      }
+    }
+  
+      /*Стилі для секції "Продукт"*/
+  
+    @media (max-width: 480px) {
+  
+      .product .container {
+        flex-direction: column; 
+        align-items: center; 
+      }
+    
+      .product-image img {
+        max-width: 90%; 
+        margin-bottom: 20px; 
+      }
+    
+      .product-content {
+        text-align: center; 
+      }
+    
+      .product-content h2 {
+        font-size: 1.8rem; 
+      }
+    
+      .product-content p {
+        font-size: 1rem;
+        margin-bottom: 20px; 
+      }
+      
       .btn {
         display:block ;
         width: 100;
@@ -530,167 +638,59 @@
         margin: 20px auto;
         font-size: 1rem;
         padding: 12px 20px;
-
+  
          &:hover {
           background-color: #00573d;
-       }
-      } 
+        }
+     }
     }
-  }    
+  }   
   
-    
-  
-      
-
-/* Секція "Продукт" */
-.product {
-  padding: 60px 20px;
-  background-color: #ffffff;
-
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px; 
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .product-image {
-    flex: 1;
-    text-align: center;
-
-    img {
-      width: 300px;
-      max-width: 300px;
-      height: auto;
-      border-radius: 18px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      object-fit: cover;
-      background-color: #01996D33;
-    }
-  }
-
-  .product-content {
-    flex: 1;
+  /* Футер */
+  .footer {
+    background-color: #2a5952;
+    color: #fff;
+    padding: 40px;
+    border-radius: 16px;
     text-align: left;
-
-    h2 {
-      font-size: 2.5rem;
-      color: #2e6155;
+    min-height: 200px;
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    h3 {
+      font-size: 1.5rem;
       margin-bottom: 20px;
-      font-weight: bold;
-      line-height: 1.2;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: #666;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      text-decoration: none;
-      padding: 15px 30px;
-      background-color: #007b5e;
-      color: #ffffff;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: #00573d;
-      }
-    }
-  }
-
-    /*Стилі для секції "Продукт"*/
-
-  @media (max-width: 480px) {
-
-    .product .container {
-      flex-direction: column; 
-      align-items: center; 
     }
   
-    .product-image img {
-      max-width: 90%; 
-      margin-bottom: 20px; 
-    }
-  
-    .product-content {
-      text-align: center; 
-    }
-  
-    .product-content h2 {
-      font-size: 1.8rem; 
-    }
-  
-    .product-content p {
-      font-size: 1rem;
-      margin-bottom: 20px; 
-    }
-    
-    .btn {
-      display:block ;
-      width: 100;
-      max-width: 300px;
-      margin: 20px auto;
-      font-size: 1rem;
-      padding: 12px 20px;
-
-       &:hover {
-        background-color: #00573d;
-      }
-   }
-  }
-}   
-
-/* Футер */
-.footer {
-  background-color: #2a5952;
-  color: #fff;
-  padding: 40px;
-  border-radius: 16px;
-  text-align: left;
-  min-height: 200px;
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-
-  .footer-links {
-    display: flex;
-    flex-direction: column; 
-    gap: 15px; 
-    padding-left: 0;
-
-    .contact-item {
+    .footer-links {
       display: flex;
-      align-items: center; 
-      font-size: 1.2rem;
-
-      i {
-        margin-right: 10px; 
-        font-size: 1.2rem; 
-        color: #ffffff; 
-      }
-
-      a, span {
-        color: #ffffff; 
-        text-decoration: none; 
-        transition: color 0.3s ease;
-
-        &:hover {
+      flex-direction: column; 
+      gap: 15px; 
+      padding-left: 0;
+  
+      .contact-item {
+        display: flex;
+        align-items: center; 
+        font-size: 1.2rem;
+  
+        i {
+          margin-right: 10px; 
+          font-size: 1.2rem; 
           color: #ffffff; 
+        }
+  
+        a, span {
+          color: #ffffff; 
+          text-decoration: none; 
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: #ffffff; 
+          }
         }
       }
     }
   }
-}
