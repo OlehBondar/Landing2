@@ -161,14 +161,11 @@ html, body {
   width: 100%;
   height: 500px;
 }
-.hero .container {
-  position: absolute;
-  top: 30%;
-  left: 7%;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
-  width: 90%;
-  max-width: 600px;
+.hero .content-wrapper {
+  padding: 20px;
+  border-radius: 10px; /* Округлення */
+  text-align: left; /* Вирівнювання тексту */
+  margin-left: -30px;
 }
 .hero h1 {
   font-size: clamp(1.8rem, 4vw, 3rem);
@@ -179,7 +176,7 @@ html, body {
 .hero p {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
-  color: #484848;
+  color: #000000;
 }
 .hero .btn-primary {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -194,33 +191,33 @@ html, body {
 .hero .btn-primary:hover {
   background-color: #016649;
 }
-@media (max-width: 768px) {
-  .hero {
-    padding: 50px 10px;
-  }
-  .hero .container {
-    left: 5%;
-  }
-}
 @media (max-width: 480px) {
-  .hero {
+  .hero .content-wrapper {
     padding: 20px;
-  }
-  .hero .container {
-    text-align: center;
-    left: 0;
-    -webkit-transform: none;
-            transform: none;
-    width: 100%;
+    text-align: left;
+    margin-top: 100%;
   }
   .hero h1 {
     font-size: 1.5rem;
+    margin-bottom: 10px;
   }
   .hero p {
     font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: white;
   }
   .hero .btn-primary {
     font-size: 0.9rem;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
   }
 }
 
