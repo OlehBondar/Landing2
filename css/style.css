@@ -1,6 +1,9 @@
 @charset "UTF-8";
-html {
+html, body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /*Стилі для хедера та навігації*/
@@ -151,15 +154,12 @@ html {
 /*Стилі для секції Hero*/
 .hero {
   position: relative;
+  overflow: hidden;
   background: url("../images/hero.jpeg") no-repeat center center/cover;
   color: #fff;
-  text-align: left;
   padding: 100px 15px;
-  position: relative;
   width: 100%;
-  border-radius: 10px;
   height: 500px;
-  /* Стилі для мобільних пристроїв */
 }
 .hero .container {
   position: absolute;
@@ -167,58 +167,60 @@ html {
   left: 7%;
   -webkit-transform: translateY(-30%);
           transform: translateY(-30%);
+  width: 90%;
   max-width: 600px;
 }
 .hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1.2;
   margin-bottom: 20px;
   color: #01996d;
 }
 .hero p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
   color: #484848;
 }
 .hero .btn-primary {
-  font-size: 1.2rem;
-  padding: 15px 30px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  padding: 10px 20px;
   background: #01996d;
   color: #fff;
-  border: none;
   border-radius: 5px;
   text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: background-color 0.9s ease;
-  transition: background-color 0.9s ease;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 .hero .btn-primary:hover {
   background-color: #016649;
 }
-@media (max-width: 480px) {
-  .hero .container {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 60%;
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 10px;
   }
-  .hero h1 {
-    font-size: 1.8rem;
+  .hero .container {
+    left: 5%;
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px;
+  }
+  .hero .container {
     text-align: center;
     left: 0;
+    -webkit-transform: none;
+            transform: none;
+    width: 100%;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
   }
   .hero p {
     font-size: 0.9rem;
-    text-align: center;
-    left: 0;
   }
   .hero .btn-primary {
     font-size: 0.9rem;
-    padding: 10px 15px;
-    text-align: center;
-    left: 0;
   }
 }
 
@@ -439,7 +441,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 15px;
   /*Стилі для мобільних пристроїав*/
 }
 .success-story .container {
@@ -629,7 +630,6 @@ html {
   background-color: #2a5952;
   color: #fff;
   padding: 40px;
-  border-radius: 16px;
   text-align: left;
   min-height: 200px;
 }
